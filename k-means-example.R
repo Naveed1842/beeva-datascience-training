@@ -86,16 +86,19 @@ ggplot(data = imgRGB, aes(x = x, y = y)) +
   ylab("y") +
   plotTheme()
 
+cat ("Press [enter] to continue")
+readline()
 ###############################################################################
 ## Now the interesting part! Let's use the k-means algorithm to create groups #
 ## based on their RGB values.                                                 #
 ###############################################################################
 
+cat ("Running k-means...")
 # Let's try 3 clusters! You could change this value and see what happens.
-kClusters <- 3
+kClusters <- 10
 kMeans <- kmeans(imgRGB[, c("R", "G", "B")], centers = kClusters)
 kColours <- rgb(kMeans$centers[kMeans$cluster,])
-
+cat ("Done.")
 
 # Ok now finally, lets SEE the groups.
 ggplot(data = imgRGB, aes(x = x, y = y)) + 
