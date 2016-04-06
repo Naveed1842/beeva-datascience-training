@@ -3,6 +3,7 @@
 # This worked for me ;)
 cd ~ #or $WHATEVER_YOU_WANT
 #sudo apt-get install python-pip
+#sudo apt-get install python-dev
 #sudo pip install virtualenv
 virtualenv datascience-training
 source datascience-training/bin/activate
