@@ -1,4 +1,5 @@
 # Opción recomendada (docker-jupydata):
+# Instalar docker (en Ubuntu: sudo apt-get install docker.io)
 # Ejecutar: 
 docker run -it -p 8888:8888 -v "$(pwd):/notebooks" beevaenriqueotero/docker-jupydata
 # Automáticamente descarga un contenedor de 1.4 GB
